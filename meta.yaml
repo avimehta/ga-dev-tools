@@ -50,6 +50,9 @@ projects:
   type: tool
   slug: account-explorer
   status: new
+  # scopes:
+  # - https://www.googleapis.com/auth/analytics.edit
+  # - https://www.googleapis.com/auth/analytics.manage.users
   tech: [embed_api, management_api]
 - title: Dimensions & Metrics Explorer
   type: tool
