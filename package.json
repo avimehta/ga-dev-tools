@@ -22,7 +22,7 @@
     "gulp-uglify": "^1.0.1",
     "gulp-util": "^3.0.0",
     "highlight.js": "^8.2.0",
-    "javascript-api-utils": "googleanalytics/javascript-api-utils#0.1.0",
+    "javascript-api-utils": "googleanalytics/javascript-api-utils#0.2.0",
     "jquery": "^2.1.1",
     "lodash": "^2.4.1",
     "moment": "^2.8.3",
@@ -31,6 +31,7 @@
     "rework-plugin-inline": "^1.0.1",
     "rework-suit": "^4.0.0",
     "router": "philipwalton/router#0.1.1",
+    "select2": "select2/select2#3.5.2",
     "svg4everybody": "jonathantneal/svg4everybody#1.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0"

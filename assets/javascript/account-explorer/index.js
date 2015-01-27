@@ -13,8 +13,8 @@
 // limitations under the License.
 
 
-/* global gapi */
-var $ = require('jquery');
+/* global $, gapi */
+
 var accountSummaries = require('javascript-api-utils/lib/account-summaries');
 
 

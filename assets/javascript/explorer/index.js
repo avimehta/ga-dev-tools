@@ -13,19 +13,15 @@
 // limitations under the License.
 
 
-/* global explorer */
-
-var jQuery = require('jquery');
+/* global $, explorer */
 
 module.exports = {
   init: function() {
-    // The legacy query explorer code requires jQuery to be global.
-    window.jQuery = window.$ = jQuery;
 
     // The `explorer` variable isn't defined on the page yet, so we have to wait.
     // Yeah, this isn't ideal.
     // TODO(philipwalton): refactor legacy query explorer JS to use modules.
-    jQuery(function() {
+    $(function() {
       explorer.selfUrl = location.protocol + '//' + location.host + location.pathname;
       explorer.run();
     });

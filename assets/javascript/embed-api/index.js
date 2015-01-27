@@ -13,9 +13,8 @@
 // limitations under the License.
 
 
-/* global gapi */
+/* global $, gapi */
 
-var $ = require('jquery');
 var debounce = require('lodash').debounce;
 
 //

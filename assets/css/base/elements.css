@@ -41,7 +41,7 @@ section {
 
 ul {
   list-style: square;
-  padding: 0 0 0 var(--gap);
+  padding: 0 0 0 1.5em;
 }
 
 p, ul, ol, pre {
@@ -66,7 +66,7 @@ h2 {
 h3 {
   color: #666;
   font-size: 1.25em;
-  margin: 0 0 calc(var(--gap)/1.25);
+  margin: calc(var(--gap-lg)/1.25) 0;
 }
 
 i {
@@ -122,4 +122,17 @@ input:focus,
 select:focus {
   border-color: #4d90fe;
   outline: 0;
+}
+
+
+@media (--break-lg) {
+  h1 {
+    margin: 0 0 calc(var(--gap-lg)/2.5);
+  }
+  h2 {
+    margin: calc(var(--gap-lg)/1.75) 0;
+  }
+  h3 {
+    margin: calc(var(--gap-lg)/1.25) 0;
+  }
 }

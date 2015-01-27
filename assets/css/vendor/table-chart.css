@@ -21,7 +21,42 @@ limitations under the License.
  * Styles for gapi analytics table.
  */
 
-.gapi-analytics-data-chart-table-styles-thr,
-.gapi-analytics-data-chart-table-styles-tr {
- font: inherit !important;
+.google-visualization-table-table {
+  width: 100%!important;
 }
+.google-visualization-table-sortind {
+  color: #a8a8a8!important;
+}
+.gapi2-analytics-data-chart-thr {
+  background: #f8f8f8;
+  font-weight: 700;
+}
+.gapi2-analytics-data-chart-tr-odd {
+  background: #f8f8f8;
+}
+.gapi2-analytics-data-chart-tr-hover {
+  background-color: #fffce8;
+}
+.gapi2-analytics-data-chart-tr-selected {
+  background-color: #e5f3f9;
+}
+.gapi2-analytics-data-chart-tr:last-child,
+.gapi2-analytics-data-chart-tr-odd:last-child {
+  border-bottom: 1px solid #e8e8e8;
+}
+.gapi2-analytics-data-chart-th {
+  border-bottom: 1px solid #a8a8a8;
+  padding: .6em 1em!important;
+  text-align: left;
+}
+.gapi2-analytics-data-chart-td {
+  border-left: 1px solid #e8e8e8;
+  padding: .6em 1em!important;
+}
+.gapi2-analytics-data-chart-td:first-child {
+  border-left: 0;
+}
+.gapi2-analytics-data-chart-td.google-visualization-table-td-center {
+  text-align: right!important;
+}
+

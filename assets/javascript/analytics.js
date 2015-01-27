@@ -13,10 +13,7 @@
 // limitations under the License.
 
 
-/* global ga */
-
-var $ = require('jquery');
-
+/* global $, ga */
 
 function setupOutBoundLinkTracking() {
   $(document).on('click', 'a', function() {
