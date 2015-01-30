@@ -17,6 +17,7 @@
 
 var viewSelector;
 var metadata = require('javascript-api-utils/lib/metadata');
+var template = require('lodash').template;
 
 function setup() {
 
@@ -64,10 +65,37 @@ function setup() {
 
   gapi.client.analytics.management.segments.list().then(function(response) {
 
-    var segments = response.result.items;
-    for (var i = 0, segment; segment = segments[i]; i++) {
-      console.log(segment.id, segment.kind, segment.name, segment.definition);
-    }
+    console.log(response.result.items);
+
+    var segments = response.result.items.map(function(segment) {
+      return {
+        // `id` and `text` are needs for select2 tags,
+        id: segment.segmentId,
+        text: segment.segmentId,
+
+        // All other fields are optional metadata.
+        name: segment.name,
+        group: segment.type == 'BUILT_IN' ? 'Built in Segment' : 'Custom Segment',
+        definition: segment.definition
+      };
+    });
+
+    var results = template(
+        '<div class="S2Tag">' +
+        '  <header class="S2Tag-group"><%= group %></header>' +
+        '  <div class="S2Tag-body">' +
+        '    <%= name %> <em>(<%= text %>)</em>' +
+        '  </div>' +
+        '  <footer class="S2Tag-footer"><%= definition %></footer>' +
+        '</div>');
+
+
+    $('#segment').select2({
+      tags: segments,
+      formatResult: results
+    });
+
+
   })
   .then(null, console.error.bind(console));
 
@@ -93,6 +121,7 @@ function setup() {
     });
 
     function template(result) {
+      console.log(result);
       if (!result.name) {
         return '<strong>' + result.text + '</strong>';
       }

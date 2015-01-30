@@ -34,6 +34,10 @@ limitations under the License.
   font-weight: 400;
 }
 
+.FormControl-field {
+  width: 100%;
+}
+
 input.FormControl-field,
 select.FormControl-field {
   border: 1px solid var(--border-color);
@@ -44,7 +48,6 @@ select.FormControl-field {
   height: calc(34em/14); /* 34px @ 14px body font */
   line-height: calc(20em/14); /* 20px @ 14px body font */
   padding: calc(6em/14); /* 6px @ 14px body font */
-  width: 100%;
 }
 
 input.FormControl-field:focus,

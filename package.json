@@ -5,8 +5,8 @@
     "url": "git://github.com/googleanalytics/ga-dev-tools.git"
   },
   "scripts": {
-    "build": "./node_modules/.bin/gulp build",
-    "watch": "NODE_ENV=dev ./node_modules/.bin/gulp watch"
+    "build": "gulp build",
+    "start": "NODE_ENV=dev gulp watch"
   },
   "devDependencies": {
     "browserify": "^6.0.2",
